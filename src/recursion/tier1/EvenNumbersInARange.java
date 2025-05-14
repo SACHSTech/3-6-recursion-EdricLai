@@ -9,7 +9,12 @@ public class EvenNumbersInARange {
      * @param end end of num range
     */
     public static void printEvens(int start, int end) {
-        // code
+        if (start % 2 == 0) {
+            System.out.println(start);
+        }
+        if (start < end) {
+            printEvens(start + 1, end);
+        }
     }
 
     // testing

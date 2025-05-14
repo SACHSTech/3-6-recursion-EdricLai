@@ -8,7 +8,13 @@ public class SumofNaturalNumbers {
      * @return the sum of numbers from 1-n
     */
     public static int sum(int n) {
-        return 0;
+        // base case
+        if (n == 0) {
+            return 0;
+        }
+
+        // recursive case
+        return n + sum(n - 1);
     }
     
     // testing

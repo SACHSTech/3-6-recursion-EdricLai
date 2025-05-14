@@ -7,7 +7,10 @@ public class CountDownTimer {
      * @param n number
     */
     public static void countDown(int n) {
-        // code
+        if (n >= 1) {
+            System.out.println(n);
+            countDown(n - 1);
+        }
     }
     
     // testing
