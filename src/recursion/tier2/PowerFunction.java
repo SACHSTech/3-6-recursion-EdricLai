@@ -9,9 +9,15 @@ public class PowerFunction {
      * @return calculated result
     */
     public static int power(int base, int exponent) {
-        return 0;
+        // base case
+        if (exponent == 1) {
+            return base;
+        }
+        
+        // recursive case
+        return base * power(base, exponent - 1);
     }
-
+    
     // testing
     public static void main(String[] args) {
         System.out.println(power(2, 3)); // Output: 8

@@ -8,9 +8,15 @@ public class SumOfDigits {
      * @return sum of all digits
     */
     public static int sumOfDigits(int n) {
-        return 0;
-    }
+        // base case
+        if (n <= 0) {
+            return 0;
+        }
 
+        // recursive case
+        return (n % 10) + sumOfDigits(n / 10);
+    }
+       
     // testing
     public static void main(String[] args) {
         System.out.println(sumOfDigits(1234)); // Output: 10
