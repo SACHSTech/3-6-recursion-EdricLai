@@ -8,9 +8,15 @@ public class ReverseAString {
      * @return the reversed string
     */
     public static String reverse(String s) {
-        return null;
+        // base case: if string is empty
+        if (s.length() == 0) {
+            return s;
+        }
+        
+        // recursive case: each itt takes last char and append
+        return s.charAt(s.length() - 1) + reverse(s.substring(0, s.length() - 1));
     }
-    
+
     // testing
     public static void main(String[] args) {
         System.out.println(reverse("hello")); // Output: olleh
